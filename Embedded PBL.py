@@ -7,11 +7,12 @@ from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, MessageH
 from multiprocessing import Process
 import multiprocessing, sys, signal
 
+#fill lines 12, 13, 15 and 222
 
-mymail = 'pokedude.adi@gmail.com'
-mypassword = 'qwerty203!((&'
-
-email = 'sathe_aditya@hotmail.com'
+mymail = 'mail here'
+mypassword = 'password for mymail'
+#the above two would be used to send usage statistics to the address below
+email = 'user\'s email'
 
 #declaring arrays and their shared memory forms
 Fans = [False, False]
@@ -218,7 +219,7 @@ def telegramAPI(Fans, Lights, Lights_Strobe, globalLights, Fans_Start_Time, Fans
         globalLights[0] = globalLights[1] = False
 
     #updaters and event handlers
-    updater = Updater("251903620:AAGQSJErICuLtrEEx_Enm90pyv-KpCNCbP0")
+    updater = Updater("bot ID here")
     updater.dispatcher.add_handler(CommandHandler('start', start))
     updater.dispatcher.add_handler(CommandHandler('help', help))
     updater.dispatcher.add_handler(CommandHandler('status', status))
